@@ -20,7 +20,7 @@ include(${CPM_DOWNLOAD_LOCATION})
 # See https://github.com/TheLartians/CPM.cmake for details and examples
 
 CPMAddPackage(
-  NAME yaml
+  NAME yaml-cpp
   GIT_REPOSITORY https://github.com/sthagen/yaml-cpp.git
   VERSION 0.6.4                                  
   # 0.6.4 is not released yet, so use the latest approved commit
@@ -36,4 +36,4 @@ CPMAddPackage(
 add_executable(yaml_example main.cpp)
 set_target_properties(yaml_example PROPERTIES CXX_STANDARD 17)
 
-target_link_libraries(yaml_example yaml)
+target_link_libraries(yaml_example yaml-cpp)
